@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Upcoming Events Listings</h1>
+<header>
+    <h3>By Bruce Lee Roy</h3>
+    <p>Next to each party in the list is a delete button. The user clicks the delete button for one of the parties. 
+      That party is then removed from the list.There is also a form that allows the user to enter information about a new party that they want to schedule. 
+      After filling out the form and submitting it, the user observes their party added to the list of parties.</p>
+</header>
+<section>
+    <form id="form" class="eventDash">
+    <div class="eventDash">
+      <label for="name">Event Name: </label>
+      <input type="text" name="name" id="names" required />
+    </div>    
+    <div class="eventDash">
+        <label for="start">Start date:</label>
+        <input type="date" id="start" name="trip-start" value="2024-07-22" min="2023-01-01" max="2038-12-31" required />
+    </div>
+    <div class="eventDash">
+      <label for="times">Choose a time for your event:</label>
+      <input type="time" id="times" name="appt" min="09:00" max="18:00" required />
+    </div>
+    <div class="eventDash">
+        <label for="locations">Location: </label>
+        <input type="text" name="locations" id="locations" required />
+      </div>
+    <div class="eventDash">
+        <label for="descriptions">Description: </label>
+        <input type="text" name="name" id="descriptions" required />
+    </div>
+    <br>
+
+    <button type="submit">"Add Event"</button>
+    </form>
+</section>
+<br>
+<h2>Upcoming Events</h2>
+<p>The list below contains all upcoming events managed by ShowGun entertainment. The remove event button can easily remove events that will no longer occur.</p>
+<br>
+<section>
+        <ul id="itemList">
+            <li>
+                <div class="names">Neil Armstrong</div>,
+                <div class="dates">March 13, 2026</div>,
+                <div class="times">10:00 am</div>,
+                <div class="locations">45 Land st, Lexington, KY</div>,
+                <div class="descriptions">The W, Ballroom 2A</div>,
+                <div class="button">
+                  <input type="submit" value="Remove Event" />
+                </div>
+            </li>         
+       </ul>
+
+</section>
+<script src="script.js"></script>        
+</body>
+</html>
+
+
+//Form to add names, dates, times, locations, and descriptions
+//add button
+//list rows of a user enters the website and finds a list of the names, dates, times, locations, 
+and descriptions
+//Delete button
+
+
+
