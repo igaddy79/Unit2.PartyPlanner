@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(locationbutton);
     const descriptionbutton = document.querySelector(".descriptions");
     console.log(descriptionbutton);
-    const formID = document.getElementById("form");
+    const formID = document.querySelector(".form");
      console.log(formID);
     const itemlistings = document.getElementById(".itemList");
     console.log(itemlistings);
@@ -19,17 +19,35 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(inputID);
 
     const newItemText = inputID.value;
-    
-    if (newItemText.trim() !== '') {
-        const listItem = document.createElement('li');
-        listItem.textContent = newItemText;
+    async function EventDashboard(namebutton, startbutton, timebutton, locationbutton, descriptionbutton) {
+        try{
+            const listItem = await fetch('${API_URL}/itemlistings',{
+            method: 'POST' ,
+            body: JSON.stringify({
+                names,
+                descriptions,
+                locations,
+                names,
+                times,
+            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
 
-        listID.appendChild(listItem);
+            });
+            const events = await listItem.json();
+        }   catch (error) {
+            console.error();
 
-        inputID.value = '';
-        inputID.focus();
+        }
+        }
+        
     }
-});
+
+
+
+
+);
 
 
 
